@@ -1,6 +1,6 @@
 package edu.leetcode.maxeg;
 
-import java.util.HashMap;
+import edu.leetcode.maxeg.common.TrieNode;
 
 public class Trie {
     public static void main(String[] args) {
@@ -11,28 +11,6 @@ public class Trie {
         trie.startsWith("app");
         trie.insert("app");
         trie.search("app");
-    }
-
-    private class TrieNode {
-        public void setEndOfWord(boolean endOfWord) {
-            isEndOfWord = endOfWord;
-        }
-
-        private boolean isEndOfWord;
-
-        public boolean isEndOfWord() {
-            return isEndOfWord;
-        }
-
-        public HashMap<Character, TrieNode> getChildren() {
-            return children;
-        }
-
-        private final HashMap<Character, TrieNode> children;
-
-        public TrieNode() {
-            children = new HashMap<>();
-        }
     }
 
     private final TrieNode root;
